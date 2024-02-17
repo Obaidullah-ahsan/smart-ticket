@@ -10,14 +10,197 @@
 </head>
 
 <body>
-    <header class="md:container md:mx-auto">
-
+    <header class="md:container md:mx-auto px-12 pt-6">
+        <div class="navbar bg-base-100">
+            <div class="navbar-start">
+                <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                    </div>
+                </div>
+                <a class="btn btn-ghost text-4xl font-extrabold">daisyUI</a>
+            </div>
+            <div class="navbar-center hidden lg:flex">
+                <ul class="menu menu-horizontal px-1">
+                    <li><a>Home</a></li>
+                    <li><a>About</a></li>
+                    <li><a>Destination</a></li>
+                    <li><a>Search</a></li>
+                </ul>
+            </div>
+            <div class="navbar-end">
+                <a class="btn text-[#1DD100] text-[20px] font-bold bg-[#1DD1001A] px-7 border-[#1DD10066]">Bus<img
+                        src="images/bus-icon.png" alt=""></a>
+            </div>
+        </div>
+        <section class="mt-6 h-[550px] ">
+            <div class="hero w-full h-full  bg-[url(images/banner.png)]">
+                <div class="hero-overlay rounded-3xl bg-opacity-40"></div>
+                <div class="hero-content text-center text-neutral-content">
+                    <div class="max-w-3xl">
+                        <h1 class="mb-5 text-6xl font-bold">End-to-End Travel with <span class="text-[#1DD100]">Unique
+                                Paribahan</span></h1>
+                        <p class="mb-5">Unique Paribahan is a renowned transportation company that has carved a distinct
+                            niche for itself in the competitive landscape of Bangladesh's transport industry.</p>
+                        <button class="btn btn-primary border-0 bg-[#1DD100] text-black text-[20px] font-bold px-7">Buy
+                            Tickets</button>
+                    </div>
+                </div>
+            </div>
+        </section>
     </header>
     <main>
-
+        <section class="flex flex-col justify-center items-center">
+            <h3 class="text-[40px] text-center mx-auto font-bold mt-12">Best offers for you</h3>
+            <div class="flex gap-7 my-12">
+                <div>
+                    <div class="card card-side bg-[#FFBF0F] shadow-xl">
+                        <div class="p-10">
+                            <h2 class="text-[40px] font-black">15% OFF</h2>
+                            <p class="text-[20px] font-semibold">on your next purchase</p>
+                            <p class="text-[18px] font-medium">use by January 2024</p>
+                        </div>
+                        <img src="images/cupon-devider.png" alt="">
+                        <div class="card-body p-10">
+                            <h2 class="card-title text-[32px] font-bold">NEW15</h2>
+                            <p class="text-[20px] font-medium">Coupon Code</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="card card-side  bg-[#F78C9C] shadow-xl">
+                        <div class="p-10">
+                            <h2 class="text-[40px] font-black">20% OFF</h2>
+                            <p class="text-[20px] font-semibold">on your next purchase</p>
+                            <p class="text-[18px] font-medium">use by January 2024</p>
+                        </div>
+                        <img src="images/cupon-devider.png" alt="">
+                        <div class="card-body p-10">
+                            <h2 class="card-title text-[32px] font-bold">Couple 20</h2>
+                            <p class="text-[20px] font-medium">Coupon Code</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="btn btn-outline  text-[#1DD100]">See All Offers</button>
+        </section>
+        <section
+            class="md:container md:mx-auto px-12 pt-6 bg-[#F7F8F8] pb-12 border-t-2 rounded-t-[88px] border-[#1DD100]">
+            <div class="text-center max-w-3xl mx-auto">
+                <h1 class="text-4xl font-bold">Unique Paribahan</h1>
+                <p> The company operates a fleet of modern buses equipped with advanced amenities and adheres to
+                    stringent safety standards to ensure a comfortable and secure journey for passengers.</p>
+            </div>
+            <div class="flex justify-around items-center bg-white mt-12 rounded-2xl">
+                <div class="p-8">
+                    <div class="flex gap-48 mb-10">
+                        <div class="flex gap-3">
+                            <img src="images/bus-logo.png" alt="">
+                            <div>
+                                <h2 class="text-3xl font-bold">Unique Paribahan</h2>
+                                <p>Coach-009-WEB ! AC_Business</p>
+                            </div>
+                        </div>
+                        <div>
+                            <a class="btn text-[#1DD100] text-[20px] font-bold bg-[#1DD1001A] px-5 border-[#1DD10066]"><img
+                                    src="images/seat-green.png" alt="">40 Seats left</a>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-5 bg-[#F7F8F8] p-8 rounded-xl">
+                        <div class="flex justify-between border-b-2 border-dashed pb-6">
+                            <p>Route</p>
+                            <p>Dhaka - Sylhet</p>
+                        </div>
+                        <div class="flex justify-between border-b-2 border-dashed pb-6">
+                            <p>Departure Time</p>
+                            <p>9:00 PM</p>
+                        </div>
+                        <div class="flex justify-between pt-4">
+                            <p class="bg-[#0307120D] rounded-xl px-4 py-2">Boarding Point - Laxmipur</p>
+                            <p class="bg-[#0307120D] rounded-xl px-4 py-2">Dropping Point - Bogura</p>
+                            <p class="bg-[#0307120D] rounded-xl px-4 py-2">Est. Time - 11 Hour</p>
+                        </div>
+                    </div>
+                </div>
+                <img src="images/info-devider.png" alt="">
+                <div class="flex flex-col justify-center items-center  p-8">
+                    <img src="images/fare.png" class="w-10" alt="">
+                    <div class="text-center">
+                        <h2 class="text-3xl font-bold">550 Taka</h2>
+                        <p class="text-xl font-semibold">Per Seat</p>
+                    </div>
+                </div>
+            </div>
+            <div class="p-8 mt-10 bg-white flex rounded-2xl">
+                <div class="flex-1">
+                    <h3 class="text-2xl font-semibold pb-4">Select Your Seat</h3>
+                    <div class="flex justify-between border-y-2 border-dashed p-3">
+                        <div class="flex gap-2 items-center">
+                            <img src="images/seat-gray.png" alt="">
+                            <p>Available</p>
+                        </div>
+                        <div class="flex gap-2 items-center">
+                            <img src="images/seat-green-filled.png" alt="">
+                            <p>Selected</p>
+                        </div>
+                    </div>
+                    <div class="w-full flex justify-end"><button class="btn w-32 my-5"><img src="images/tabler-icon.png" alt=""></button></div>
+                    <div class="flex gap-6">
+                        <div class="flex flex-col gap-11 pt-3">
+                            <p>A</p>
+                            <p>B</p>
+                            <p>C</p>
+                            <p>D</p>
+                            <p>E</p>
+                        </div>
+                        <div class="grid flex-1 grid-cols-4 gap-5">
+                            <button class="btn">A1</button>
+                            <button class="btn">A2</button>
+                            <button class="btn">A3</button>
+                            <button class="btn">A4</button>
+                            <button class="btn">B1</button>
+                            <button class="btn">B2</button>
+                            <button class="btn">B3</button>
+                            <button class="btn">B4</button>
+                            <button class="btn">C1</button>
+                            <button class="btn">C2</button>
+                            <button class="btn">C3</button>
+                            <button class="btn">C4</button>
+                            <button class="btn">D1</button>
+                            <button class="btn">D2</button>
+                            <button class="btn">D3</button>
+                            <button class="btn">D4</button>
+                            <button class="btn">E1</button>
+                            <button class="btn">E2</button>
+                            <button class="btn">E3</button>
+                            <button class="btn">E4</button>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <h2>Select Your Seat</h2>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
-    <footer>
-
+    <footer class="mt-10">
+        <footer class="footer p-20 justify-between bg-[#030712] text-neutral-content">
+            <aside>
+                <h2 class="text-2xl font-bold">Unique Paribahan</h2>
+                <p>The company operates a fleet of modern buses equipped <br> with advanced amenities and adheres to
+                    stringent safety</p>
+            </aside>
+            <nav>
+                <h6 class="text-white">Download our app</h6>
+                <img src="images/android.png" class="w-36" alt="">
+            </nav>
+        </footer>
     </footer>
 </body>
 
