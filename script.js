@@ -66,12 +66,15 @@ function discountUpdateGrandTotal(event) {
             setValueById('grand-total',afterDiscountGrandTotal)
             console.log(typeof afterDiscountGrandTotal);
         }
-        else if(copuponInput === 'Couple 20' && count >=2){
+        else if(copuponInput === 'Couple 20' && count >=4){
             let discount = price*0.2;
             setValueById('dicount-price',discount);
             let afterDiscountGrandTotal = price-discount;
             setValueById('grand-total',afterDiscountGrandTotal)
             console.log(typeof afterDiscountGrandTotal);
+        }
+        else{
+            return alert('4 ta ticket kinle Discount paben');
         }
     }
 }
