@@ -1,14 +1,3 @@
-document.getElementById("copupon-input").addEventListener('keyup', function (event) {
-    const text = event.target.value;
-    const deleteAttribute = document.getElementById("apply-btn");
-    if (text === 'NEW15' || text === 'Couple 20') {
-        deleteAttribute.removeAttribute('disabled')
-    }
-    else {
-        deleteAttribute.setAttribute('disabled', true)
-    }
-})
-
 const btnSeats = document.getElementsByClassName('btn-seat');
 let count = 0;
 let price = 0;
@@ -18,6 +7,20 @@ for (let seatElement of btnSeats) {
         count += 1;
         if (count > 4) {
             return alert('4 tar basi kinte parben na')
+        }
+        const deleteAttribute = document.getElementById("copupon-input");
+        if (count === 4) {
+            deleteAttribute.removeAttribute('disabled')
+        }
+        else {
+            deleteAttribute.setAttribute('disabled', true)
+        }
+        const deleteAttributeNextBtn = document.getElementById("next-btn");
+        if (count >= 1){
+            deleteAttributeNextBtn.removeAttribute('disabled')
+        }
+        else {
+            deleteAttributeNextBtn.setAttribute('disabled', true)
         }
         const seatCatagory = event.target.innerText
         const selectedSeatContainer = document.getElementById('selected-seat-container');
@@ -51,30 +54,32 @@ function setValueById(id, value) {
     element.innerText = value;
 }
 
+document.getElementById('number-fild').addEventListener('keyup',function(event){
+    const numberFildValue = event.target.value;
+})
 
 function discountUpdateGrandTotal(event) {
     const copuponInput = document.getElementById('copupon-input').value;
     if (copuponInput === 'NEW15' || copuponInput === 'Couple 20') {
-        const couponFild=document.getElementById('coupon-fild');
+        const couponFild = document.getElementById('coupon-fild');
         couponFild.classList.add('hidden')
-        const dicountContent=document.getElementById('dicount-content');
+        const dicountContent = document.getElementById('dicount-content');
         dicountContent.classList.remove('hidden')
-        if(copuponInput === 'NEW15' && count===4){
-            let discount = price*0.15;
-            setValueById('dicount-price',discount);
-            let afterDiscountGrandTotal = price-discount;
-            setValueById('grand-total',afterDiscountGrandTotal)
-            console.log(typeof afterDiscountGrandTotal);
+        if (copuponInput === 'NEW15') {
+            let discount = price * 0.15;
+            setValueById('dicount-price', discount);
+            let afterDiscountGrandTotal = price - discount;
+            setValueById('grand-total', afterDiscountGrandTotal)
         }
-        else if(copuponInput === 'Couple 20' && count >=4){
-            let discount = price*0.2;
-            setValueById('dicount-price',discount);
-            let afterDiscountGrandTotal = price-discount;
-            setValueById('grand-total',afterDiscountGrandTotal)
-            console.log(typeof afterDiscountGrandTotal);
+        else if (copuponInput === 'Couple 20') {
+            let discount = price * 0.2;
+            setValueById('dicount-price', discount);
+            let afterDiscountGrandTotal = price - discount;
+            setValueById('grand-total', afterDiscountGrandTotal)
         }
-        else{
-            return alert('4 ta ticket kinle Discount paben');
-        }
+
+    }
+    else{
+        return alert('Invalid Coupon Code')
     }
 }
