@@ -15,13 +15,7 @@ for (let seatElement of btnSeats) {
         else {
             deleteAttribute.setAttribute('disabled', true)
         }
-        const deleteAttributeNextBtn = document.getElementById("next-btn");
-        if (count >= 1){
-            deleteAttributeNextBtn.removeAttribute('disabled')
-        }
-        else {
-            deleteAttributeNextBtn.setAttribute('disabled', true)
-        }
+
         const seatCatagory = event.target.innerText
         const selectedSeatContainer = document.getElementById('selected-seat-container');
         const li = document.createElement('li');
@@ -54,8 +48,15 @@ function setValueById(id, value) {
     element.innerText = value;
 }
 
-document.getElementById('number-fild').addEventListener('keyup',function(event){
+document.getElementById('number-fild').addEventListener('keyup', function (event) {
     const numberFildValue = event.target.value;
+    const deleteAttributeNextBtn = document.getElementById("next-btn");
+    if (count >= 1 && numberFildValue >= 1) {
+        deleteAttributeNextBtn.removeAttribute('disabled')
+    }
+    else {
+        deleteAttributeNextBtn.setAttribute('disabled', true)
+    }
 })
 
 function discountUpdateGrandTotal(event) {
@@ -79,7 +80,7 @@ function discountUpdateGrandTotal(event) {
         }
 
     }
-    else{
+    else {
         return alert('Invalid Coupon Code')
     }
 }
